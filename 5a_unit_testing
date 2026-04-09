@@ -1,0 +1,16 @@
+from EmotionDetection.emotion_detection import emotion_detector
+import unittest
+
+class TestEmotionDetector(unittest.TestCase):
+    def test_emotion_detector(self):
+        result = emotion_detector("I am glad this worked")
+        self.assertEqual(result , 'joy')
+
+        result = emotion_detector("I am really mad about this")
+        self.assertEqual(result , 'anger')
+
+        result = emotion_detector("I feel disgusted with this")
+        self.assertEqual(result , 'disgust')
+
+if __name__ == '__main__':
+    unittest.main()
