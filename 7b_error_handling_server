@@ -1,0 +1,9 @@
+@app.route("/emotionDetector", methods= )
+def emotionDetector():
+    text_to_analyse = request.json.get("text")
+    
+    if not text_to_analyse:
+        return jsonify({"error": "Invalid text! Please try again."}), 400
+    
+    response = emotion_detector(text_to_analyse)
+    return jsonify(response)
