@@ -1,0 +1,11 @@
+from flask import Flask, request, jsonify
+from EmotionDetection.emotion_detection import emotion_detector
+
+app = Flask("Emotion Detector")
+
+@app.route("/emotionDetector", methods= )
+def emotionDetector():
+    text_to_analyse = request.json.get("text")
+    
+    if not text_to_analyse:
+        return jsonify({"error": "Invalid
