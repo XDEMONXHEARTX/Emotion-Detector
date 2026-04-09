@@ -1,0 +1,11 @@
+def emotion_detector(text_to_analyse):
+    response = emotion_analyzer.detect_emotion(text_to_analyse)
+    formatted_response = {
+        'anger': response.get('anger', None),
+        'disgust': response.get('disgust', None),
+        'fear': response.get('fear', None),
+        'joy': response.get('joy', None),
+        'sadness': response.get('sadness', None),
+        'dominant_emotion': response.get('dominant_emotion', None)
+    }
+    return formatted_response
